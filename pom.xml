@@ -10,6 +10,7 @@
     </parent>
     <groupId>com.jasik</groupId>
     <artifactId>MomsNaggingAPI</artifactId>
+    <packaging>jar</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>MomsNaggingAPI</name>
     <description>MomsNaggingAPI</description>
