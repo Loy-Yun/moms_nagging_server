@@ -96,9 +96,10 @@ public class UserService {
         List<UserFollowInterface> userFollowInterfaces = userRepository.findAllByPersonalIdContainingIgnoreCaseAndIdNot(id, personalId);
         return userFollowInterfaces.stream()
                 .map(u -> User.PublicUserResponse.builder()
-                        .personalId(u.getUser().getPersonalId())
                         .id(u.getUser().getId())
+                        .personalId(u.getUser().getPersonalId())
                         .nickName(u.getUser().getNickName())
+                        .statusMsg(u.getUser().getStatusMsg())
                         .createdAt(u.getUser().getCreatedAt())
                         .isFollowing(u.getFollow() != null && !u.getFollow().isBlocked())
                         .build())

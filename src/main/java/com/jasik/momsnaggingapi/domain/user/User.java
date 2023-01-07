@@ -206,6 +206,7 @@ public class User extends BaseTime {
         private Long id;
         private String nickName;
         private String personalId;
+        private String statusMsg;
         private LocalDateTime createdAt;
         private Boolean isFollowing;
     }
